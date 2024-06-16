@@ -70,7 +70,7 @@ const mapErrorToCompletion = (error: any, model: string): ErrorCompletion => {
   };
 };
 
-// Test function to query data from MongoDB
+
 async function testMongoDBQuery(query: any, connectionString: string) {
   console.log('Connecting to MongoDB');
   console.log(query);
@@ -90,10 +90,24 @@ async function testMongoDBQuery(query: any, connectionString: string) {
 
     // Execute the query based on the operation
     let result;
-    if (query.operation === 'find') {
-      result = await collection.find(query.filters).toArray();
-    } else {
-      throw new Error(`Unsupported operation: ${query.operation}`);
+    switch (query.operation) {
+      case 'find':
+        result = await collection.find(query.filters).toArray();
+        break;
+      case 'insert':
+        result = await collection.insertMany(query.documents);
+        break;
+      case 'insertOne':
+        result = await collection.insertOne(query.document);
+        break;
+      case 'update':
+        result = await collection.updateMany(query.filters, { $set: query.update });
+        break;
+      case 'delete':
+        result = await collection.deleteMany(query.filters);
+        break;
+      default:
+        throw new Error(`Unsupported operation: ${query.operation}`);
     }
 
     return result;
