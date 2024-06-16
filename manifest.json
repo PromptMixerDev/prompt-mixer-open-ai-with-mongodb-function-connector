@@ -1,0 +1,11 @@
+{
+  "id": "prompt-mixer-open-ai-with-mongodb-function-connector",
+  "name": "OpenAI with MongoDB Function Connector",
+  "version": "1.0.0",
+  "minAppVersion": "0.1.0",
+  "description": "This connector for Prompt Mixer allows you to access the OpenAI API from within Prompt Mixer. It now includes a function that can execute any query in MongoDB.",
+  "author": "Prompt Mixer",
+  "authorUrl": "https://promptmixer.dev",
+  "fundingUrl": "https://promptmixer.dev/pricing",
+  "isDesktopOnly": false
+}
