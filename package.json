@@ -23,7 +23,7 @@
     "openai": "^4.47.1"
   },
   "devDependencies": {
-    "@types/pg": "^8.11.5",
+    "@types/pg": "^8.11.6",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
