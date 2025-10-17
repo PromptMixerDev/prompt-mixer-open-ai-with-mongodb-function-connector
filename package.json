@@ -20,7 +20,7 @@
     "builtin-modules": "^5.0.0",
     "esbuild": "^0.25.10",
     "mongodb": "^6.19.0",
-    "openai": "^6.1.0"
+    "openai": "^6.3.0"
   },
   "devDependencies": {
     "eslint": "^9.37.0",
