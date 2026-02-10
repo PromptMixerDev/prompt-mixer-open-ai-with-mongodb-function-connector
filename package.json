@@ -19,7 +19,7 @@
   "dependencies": {
     "builtin-modules": "^5.0.0",
     "esbuild": "^0.27.2",
-    "mongodb": "^7.0.0",
+    "mongodb": "^7.1.0",
     "openai": "^6.17.0"
   },
   "devDependencies": {
